@@ -1,0 +1,67 @@
+1 program fibo;
+  2 
+  3 function Fibonacci(n: integer): longint; {обьявили ф-ю}
+  4 var                                      {обьявили переменные}
+  5     i: integer;                          {тип переменных}
+  6     p, q, r: longint;                    {тип переменных}
+  7 begin
+  8     if n <= 0 then
+  9         Fibonacci := 0
+ 10     else
+ 11     begin
+ 12         q := 0;
+ 13         r := 1;
+ 14         for i := 2 to n do
+ 15         begin
+ 16             p := q;
+ 17             q := r;
+ 18             r := p + q
+ 19         end;
+ 20         Fibonacci := r
+ 21     end
+ 22 end;
+ 23 
+ 24 var
+ 25     a: integer;
+ 26 
+ 27 begin
+ 28     writeln('Напиши число, будем считать фибоначи:');
+ 29     readln(a);
+ 30     writeln('фибоначи твоего числа = ', Fibonacci(a))
+ 31 end.
+ 32 
+
+С применением  exit
+
+program fibo;
+  2 
+  3 function Fibonacci(n: integer): longint; {обьявили ф-ю}
+  4 var                                      {обьявили переменные}
+  5     i: integer;                          {тип переменных}
+  6     p, q, r: longint;                    {тип переменных}
+  7 begin
+  8     if n <= 0 then
+  9     begin
+ 10         Fibonacci := 0;
+ 11         exit
+ 12     end;
+ 13     q := 0;
+ 14     r := 1;
+ 15     for i := 2 to n do
+ 16     begin
+ 17         p := q;
+ 18         q := r;
+ 19         r := p + q
+ 20     end;
+ 21     Fibonacci := r
+ 22 end;
+ 23 
+ 24 var
+ 25     a: integer;
+ 26 
+ 27 begin
+ 28     writeln('Напиши число, будем считать фибоначи:');
+ 29     readln(a);
+ 30     writeln('фибоначи твоего числа = ', Fibonacci(a))
+ 31 end.
+
