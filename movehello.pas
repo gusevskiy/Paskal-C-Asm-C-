@@ -59,13 +59,13 @@ begin
             if c > 0 then {}
             break;
         case c of
-            -75: {}
+            -75: {стрелка влево}
                 MoveMessage(CurX, CurY, Message, -1, 0);
-            -77: {}
+            -77: {стрелка вправо}
                 MoveMessage(CurX, CurY, Message, 1, 0);
-            -72: {}
+            -72: {стрелка вверх}
                 MoveMessage(CurX, CurY, Message, 0, -1);
-            -80:
+            -80: {стрелка вниз}
                 MoveMessage(CurX, CurY, Message, 0, 1)
         end
     end;
