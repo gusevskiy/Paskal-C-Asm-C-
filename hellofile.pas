@@ -17,7 +17,7 @@ begin
     writeln(f, message);
     if IOResult <> 0 then
     begin
-        writeln('Couldn''t open file ', filename);
+        writeln('Couldn''t write to the file');
         halt(1)
     end;
     close(f)
