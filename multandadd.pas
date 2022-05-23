@@ -15,7 +15,7 @@ begin
     begin
         writeln('Could not open ', ParamStr(1));
         halt(1)
-    end;
+    end;  
     sum := 0;
     while not SeekEof(f) do
     begin
